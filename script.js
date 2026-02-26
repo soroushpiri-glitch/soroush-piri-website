@@ -1,4 +1,4 @@
 function sayWelcome() {
-    const audio = new Audio("assets/welcome.m4a");
+    const audio = new Audio("assets/Welcome.m4a");
     audio.play();
 }
