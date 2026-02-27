@@ -4,6 +4,10 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Soroush Piri | About</title>
+
+  <!-- AOS Animation CSS -->
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
+
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
@@ -26,12 +30,12 @@
   <div class="container about-layout">
 
     <!-- Profile Image -->
-    <div class="about-image">
+    <div class="about-image" data-aos="fade-right">
       <img src="assets/personal-profile.jpeg" alt="Soroush Piri">
     </div>
 
     <!-- About Text -->
-    <div class="about-text">
+    <div class="about-text" data-aos="fade-left">
       <h1>About Me</h1>
 
       <p>
@@ -55,6 +59,15 @@ translate complex data into actionable insights across diverse application domai
 
   </div>
 </section>
+<!-- AOS Animation JS -->
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 
+<script>
+  AOS.init({
+    duration: 900,
+    once: true,
+    easing: "ease-in-out"
+  });
+</script>
 </body>
 </html>
