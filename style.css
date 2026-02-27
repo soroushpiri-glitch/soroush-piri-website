@@ -171,3 +171,22 @@ button:hover {
   color: #ffffff;
   text-decoration: underline;
 }
+
+.project-links {
+  margin-top: 15px;
+  display: flex;
+  gap: 20px;              /* <-- spacing between Software & Workshop */
+  flex-wrap: wrap;
+}
+
+.project-links a {
+  color: #4cc9f0;
+  font-weight: 600;
+  text-decoration: none;
+  transition: 0.3s ease;
+}
+
+.project-links a:hover {
+  color: #ffffff;
+  text-decoration: underline;
+}
