@@ -138,11 +138,11 @@ button:hover {
 }
 
 .project-card {
-  margin-bottom: 70px;
+  margin-bottom: 50px;
 }
 
 .section-intro {
-  margin-bottom: 70px;
+  margin-bottom: 50px;
 }
 
 .page h1 {
@@ -156,4 +156,18 @@ button:hover {
 .project-subtitle {
   margin-top: 0;
   margin-bottom: 20px;   /* space under subtitle */
+}
+
+/* Make project links readable on dark background */
+.project-links a,
+.project-links a:visited {
+  color: #4cc9f0;            /* readable cyan */
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.project-links a:hover,
+.project-links a:focus {
+  color: #ffffff;
+  text-decoration: underline;
 }
