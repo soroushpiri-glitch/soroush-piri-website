@@ -39,7 +39,7 @@ nav a:hover {
 }
 
 .hero {
-    height: 90vh;
+    min-height: 60vh;   /* changed from 90vh */
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -189,4 +189,32 @@ button:hover {
 .project-links a:hover {
   color: #ffffff;
   text-decoration: underline;
+}
+
+/* Impact Section */
+.impact {
+  padding: 80px 0;
+  text-align: center;
+  background: linear-gradient(to right, #0f172a, #1e293b);
+}
+
+.impact-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 40px;
+  max-width: 1100px;
+  margin: auto;
+}
+
+.impact-item h2 {
+  font-size: 48px;
+  color: #4cc9f0;
+  margin-bottom: 10px;
+  font-weight: 700;
+}
+
+.impact-item p {
+  font-size: 16px;
+  color: #cbd5e1;
+  letter-spacing: 0.5px;
 }
