@@ -27,7 +27,40 @@
     <h1>Research Projects and AI-driven Systems</h1>
 
     <div class="projects-grid">
+<!-- Project 6 -->
+<div class="project-card" data-aos="fade-up">
+  <h2>MVA AI Operations Assistant - 2026</h2>
 
+  <p class="project-subtitle">
+    AI-Powered Data Analytics API | FastAPI + LLM Integration
+  </p>
+
+  <p>
+    This project demonstrates a real-time AI-powered assistant that analyzes Maryland Motor Vehicle
+    Administration (MVA) branch performance data. The system integrates a FastAPI backend,
+    large language models, and structured operational datasets to answer natural language questions
+    about wait times, branch efficiency, and service demand.
+  </p>
+
+  <p>
+    Users can interact with the dataset through a conversational interface, allowing them to ask
+    questions such as identifying branches with the longest wait times, the most efficient service
+    locations, or changes in performance across months.
+  </p>
+
+  <p>
+    The backend API performs data processing and analytics while the AI model interprets the user’s
+    intent and generates insights from the data.
+  </p>
+
+  <div id="chat-box" style="border:1px solid #ccc;padding:10px;height:200px;overflow-y:auto;margin-bottom:10px;"></div>
+
+  <input id="chat-input" type="text"
+         placeholder="Example: Top 5 longest wait time in December 2025"
+         style="width:70%;padding:8px;">
+
+  <button onclick="sendMessage()">Ask</button>
+</div>
       <!-- Project 1 -->
       <div class="project-card" data-aos="fade-up">
         <h2>Uncovering Symmetric and Asymmetric Deterioration Patterns in Maryland’s Steel Bridges Through Time-Series Clustering and PCA - 2025</h2>
