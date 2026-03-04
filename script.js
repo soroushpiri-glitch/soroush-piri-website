@@ -21,3 +21,30 @@ counters.forEach(counter => {
 
   updateCount();
 });
+
+async function sendMessage() {
+    const input = document.getElementById("chat-input");
+    const message = input.value;
+
+    if (!message) return;
+
+    const chatBox = document.getElementById("chat-box");
+
+    chatBox.innerHTML += "<p><b>You:</b> " + message + "</p>";
+
+    const response = await fetch("https://mva-chat-api.onrender.com/chat", {
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json"
+        },
+        body: JSON.stringify({
+            message: message
+        })
+    });
+
+    const data = await response.json();
+
+    chatBox.innerHTML += "<p><b>Assistant:</b> " + data.answer + "</p>";
+
+    input.value = "";
+}
