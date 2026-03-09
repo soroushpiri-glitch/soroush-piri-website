@@ -240,3 +240,29 @@ button:hover {
   color: #ffffff;
   text-decoration: underline;
 }
+
+.table-container {
+  margin-top: 20px;
+  overflow-x: auto;
+}
+
+#data-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+  background: white;
+  color: black;
+}
+
+#data-table th,
+#data-table td {
+  border: 1px solid #ccc;
+  padding: 8px;
+  font-size: 14px;
+  text-align: left;
+}
+
+#data-table th {
+  background: #2c3e50;
+  color: white;
+}
