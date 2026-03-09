@@ -267,3 +267,7 @@ button:hover {
   background: #2c3e50;
   color: white;
 }
+.project-description{
+    text-align: justify;
+    line-height: 1.6;
+}
