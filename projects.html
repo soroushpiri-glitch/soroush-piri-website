@@ -53,13 +53,23 @@
     intent and generates insights from the data.
   </p>
 
-  <div id="chat-box" style="border:1px solid #ccc;padding:10px;height:200px;overflow-y:auto;margin-bottom:10px;"></div>
+   <div id="chat-box" style="border:1px solid #ccc;padding:10px;height:200px;overflow-y:auto;margin-bottom:10px;"></div>
 
   <input id="chat-input" type="text"
          placeholder="Example: Top 5 longest wait time in December 2025"
          style="width:70%;padding:8px;">
 
   <button onclick="sendMessage()">Ask</button>
+
+  <h3>Dataset Preview</h3>
+  <p>
+    This dataset contains Maryland MVA branch performance metrics including
+    monthly customer volume, wait times, and operational efficiency indicators.
+  </p>
+
+  <div class="table-container">
+    <table id="data-table"></table>
+  </div>
 </div>
       <!-- Project 1 -->
       <div class="project-card" data-aos="fade-up">
@@ -236,14 +246,50 @@
 
 <!-- AOS Animation JS -->
 <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
 <script>
-  AOS.init({
-    duration: 900,
-    once: true,
-    easing: "ease-in-out"
-  });
+AOS.init({
+  duration: 900,
+  once: true,
+  easing: "ease-in-out"
+});
 </script>
-      
+
+<!-- CSV parser -->
+<script src="https://cdn.jsdelivr.net/npm/papaparse@5.4.1/papaparse.min.js"></script>
+
+<script>
+Papa.parse("assets/MVA_Customers_Served_&_Wait_Time_by_Branch_20260303.csv", {
+  download: true,
+  header: true,
+  preview: 8,
+  complete: function(results) {
+
+    const table = document.getElementById("data-table");
+    const data = results.data;
+
+    if (!table || data.length === 0) return;
+
+    const columns = Object.keys(data[0]);
+
+    let header = "<tr>";
+    columns.forEach(col => header += `<th>${col}</th>`);
+    header += "</tr>";
+
+    table.innerHTML += header;
+
+    data.forEach(row => {
+      let rowHTML = "<tr>";
+      columns.forEach(col => rowHTML += `<td>${row[col] ?? ""}</td>`);
+      rowHTML += "</tr>";
+      table.innerHTML += rowHTML;
+    });
+
+  }
+});
+</script>
+
 <script src="script.js"></script>
+
 </body>
 </html>
