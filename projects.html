@@ -36,21 +36,22 @@
   </p>
 
   <p>
-    This project demonstrates a real-time AI-powered assistant that analyzes Maryland Motor Vehicle
-    Administration (MVA) branch performance data. The system integrates a FastAPI backend,
-    large language models, and structured operational datasets to answer natural language questions
-    about wait times, branch efficiency, and service demand.
+    This project demonstrates a real-time AI-powered assistant that analyzes Maryland Motor Vehicle Administration (MVA) branch performance data 
+    and supports intelligent trip planning. The system integrates a FastAPI backend, large language models, structured operational datasets, 
+    geocoding, and live traffic routing to answer natural language questions about wait times, branch efficiency, service demand, and travel decisions.
+
   </p>
 
   <p>
-    Users can interact with the dataset through a conversational interface, allowing them to ask
-    questions such as identifying branches with the longest wait times, the most efficient service
-    locations, or changes in performance across months.
+    Users can interact with the system through a conversational interface to identify branches with the longest or shortest wait times,
+    compare operational efficiency, examine changes in performance across months, estimate driving time to specific branches, 
+    and calculate total visit time by combining real-time travel duration with historical branch wait times.
   </p>
 
   <p>
-    The backend API performs data processing and analytics while the AI model interprets the user’s
-    intent and generates insights from the data.
+    The assistant also supports decision-oriented queries, such as recommending the best MVA branch to visit based on a user’s location,
+    current traffic conditions, and expected wait time. The backend API handles data processing, routing, and optimization,
+    while the AI model interprets user intent and returns actionable insights in natural language.
   </p>
 
    <div id="chat-box" style="border:1px solid #ccc;padding:10px;height:120px;overflow-y:auto;margin-bottom:10px;"></div>
